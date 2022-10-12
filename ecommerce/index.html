@@ -8,8 +8,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
+<body class="">
 <nav class="nav-bar">
+  <div class="logo-menu">
   <div class="logo-nav">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="logo-academlo">
       <title>Academlo Logo</title>
@@ -23,12 +24,30 @@
   </svg>
     <h2>STORE</h2>
   </div>
+  <div class="menu-bar">
+    <li>Home</li>
+    <li>Products</li>
+  </div>
+</div>
   <div class="opciones-nav">
-    <i class='bx bxs-moon bx-sm'></i>
-    <i class='bx bxs-cart bx-sm'></i>
-    <i class='bx bx-menu bx-sm'></i>
+    <i class='bx bxs-moon bx-sm' id="theme-btn"></i>
+    <i class='bx bxs-cart bx-sm' id="cart-btn"></i>
+    <i class='bx bx-menu bx-sm' id="menu-btn"></i>
   </div>
 </nav>
+<section class="cart-mobile">
+  <h2>My cart</h2>
+  <div class="contenedor-cart-mobile">
+  <img src="./assets/images/empty-cart.png" alt="" class="imagen-cartmobile">
+  <h2>Your Cart is Empty</h2>
+  <p>You can add items to your cart by clicking on the "+" button on the product page</p>
+  </div>
+  <div class="contenedor-price">
+  <p>0 items</p>
+  <p>$0.00</p>
+  </div class="btn-checkout">
+  <button class="checkout">Checkout</button>
+</section>
 <section class="header-section">
   <div class="rectangulo">
     <img src="./assets/images/home.png" alt="">
@@ -37,7 +56,10 @@
     <h1>New Sweatshirt COLLECTIONS 2022</h1>
     <p class="descripcion-informacion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis velit, officia voluptates repellendus maiores quasi ipsum ut. Doloremque est, velit aspernatur in adipisci distinctio </p>
     <p class="precio">$14.00</p>
-    <button>ADD TO CART</button>
+    <Div class="botones-header">
+    <button class="header-btn">DISCOVER</button>
+    <button class="header-btn">ADD TO CART</button>
+  </Div>
   </div>
 </section>
 <section class="categorias">
@@ -58,6 +80,72 @@
     <small>4 products</small>
   </div>
 </section>
+<section class="productos">
+  <div class="contenedor-productos">
+    <div class="conte-productos">
+      <div class="fondo-gris"> 
+        <img src="./assets/images/featured1.png" alt="">
+      </div>
+      <div class="fondo-blanco">
+        <h4>$14.00</h4>
+        <small class="stock">Stock: 1</small>
+        <small class="categoria-productos">Hoodies</small>
+        <i class='bx bx-plus bx-lg'></i>
+      </div>
+     
+    </div>
+    <div class="conte-productos">
+      <div class="fondo-gris"> 
+        <img src="./assets/images/featured1.png" alt="">
+      </div>
+      <div class="fondo-blanco">
+        <h4>$14.00</h4>
+        <small class="stock">Stock: 1</small>
+        <small class="categoria-productos">Hoodies</small>
+        <i class='bx bx-plus bx-lg'></i>
+      </div>
+    </div>
+    <div class="conte-productos">
+      <div class="fondo-gris"> 
+        <img src="./assets/images/featured1.png" alt="">
+      </div>
+      <div class="fondo-blanco">
+        <h4>$14.00</h4>
+        <small class="stock">Stock: 1</small>
+        <small class="categoria-productos">Hoodies</small>
+        <i class='bx bx-plus bx-lg'></i>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="footer">
+  <div class="contenedor-footer">
+    <div class="texto-footer ">
+      <h2>Our information</h2>
+      <p>Toluca-Mexico</p>
+    </div>
+    <div class="texto-footer ">
+      <h2>About Us</h2>
+      <li>Support Center</li>
+      <li>Customer Support</li>
+      <li>About Us</li>
+      <li>Copy right</li>
+      </div>
+    <div class="texto-footer ">
+      <h2>Products</h2>
+      <li>Hoddies</li>
+      <li>Shirts</li>
+      <li>Sweatshirts</li>
+      </div>
+    <div class="texto-footer ">
+      <h2>Social</h2>
+      <i class='bx bxl-twitter bx-md'></i>
+      <i class='bx bxl-facebook bx-md' ></i>
+      <i class='bx bxl-instagram bx-md' ></i>
+  </div>
+</section>
+
 
 
 
