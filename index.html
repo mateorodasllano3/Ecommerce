@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academlo Store</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="">
 <nav class="nav-bar">
@@ -31,26 +31,46 @@
 </div>
   <div class="opciones-nav">
     <i class='bx bxs-moon bx-sm' id="theme-btn"></i>
+    <div id="cart-shop" class="nav-cart">
     <i class='bx bxs-cart bx-sm' id="cart-btn"></i>
+    <span id="cart-counter" class="counter">0</span>
+    </div>
+    <div id="menu-btn" id="menu-btn">
     <i class='bx bx-menu bx-sm' id="menu-btn"></i>
+    </div>
   </div>
 </nav>
-<section class="cart-mobile">
-  <h2>My cart</h2>
-  <div class="contenedor-cart-mobile">
-  <img src="./assets/images/empty-cart.png" alt="" class="imagen-cartmobile">
-  <h2>Your Cart is Empty</h2>
-  <p>You can add items to your cart by clicking on the "+" button on the product page</p>
-  </div>
-  <div class="contenedor-price">
-  <p>0 items</p>
-  <p>$0.00</p>
-  </div class="btn-checkout">
-  <button class="checkout">Checkout</button>
-</section>
+
+
+
+
+
+
+<div class="cart--container" id="cart-container">
+    <div class="cart" id="cart">
+      <div class="close--cart" >
+      <i class='bx bx-x' id="close-cart"></i>
+      </div>
+      <h2>My cart</h2>
+      <div class="contenedor-cart-mobile">
+        <img src="../assets/images/empty-cart.png" alt="" class="imagen-cartmobile">
+        <h2>Your Cart is Empty</h2>
+        <p>You can add items to your cart by clicking on the "+" button on the product page</p>
+      </div>
+      <div class="contenedor-price">
+        <p>0 items</p>
+        <p>$0.00</p>
+      </div>
+      <div class="btn-checkout">
+        <button class="checkout">Checkout</button>
+        </div>
+      </div>     
+</div>
+
+
 <section class="header-section">
   <div class="rectangulo">
-    <img src="./assets/images/home.png" alt="">
+    <img src="../assets/images/home.png" alt="">
   </div>
   <div class="informacion-header-section">
     <h1>New Sweatshirt COLLECTIONS 2022</h1>
@@ -84,7 +104,7 @@
   <div class="contenedor-productos">
     <div class="conte-productos">
       <div class="fondo-gris"> 
-        <img src="./assets/images/featured1.png" alt="">
+        <img src="../assets/images/featured1.png" alt="">
       </div>
       <div class="fondo-blanco">
         <h4>$14.00</h4>
@@ -96,7 +116,7 @@
     </div>
     <div class="conte-productos">
       <div class="fondo-gris"> 
-        <img src="./assets/images/featured2.png" alt="">
+        <img src="../assets/images/featured2.png" alt="">
       </div>
       <div class="fondo-blanco">
         <h4>$24.00</h4>
@@ -107,7 +127,7 @@
     </div>
     <div class="conte-productos">
       <div class="fondo-gris"> 
-        <img src="./assets/images/featured3.png" alt="">
+        <img src="../assets/images/featured3.png" alt="">
       </div>
       <div class="fondo-blanco">
         <h4>24.00</h4>
@@ -210,6 +230,6 @@
         </g>
     </svg>
     -->
-    <script src="./assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
