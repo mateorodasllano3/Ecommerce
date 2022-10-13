@@ -41,3 +41,51 @@
     }
   })
 
+  const loadComponent = () => {
+    const loader = document.getElementById( "loader" )}
+
+  const cart = document.getElementById("cart-container")
+  const openCart = () => cart.classList.remove("hide")
+
+  const closeCart =() => cart.classList.add ("hide")
+
+  const shopIcon = document.getElementById("cart-shop")
+
+  const shopCloseIcon = document.getElementById("close-cart")
+
+
+  document.addEventListener("DOMContentLoaded", () =>{
+    loadComponent()
+  })
+
+  shopIcon.addEventListener("click", () => {
+    openCart()
+  })
+  shopCloseIcon.addEventListener("click",() => {
+    closeCart()  
+  })
+ 
+
+
+
+
+
+
+
+/*
+
+  const menuBoton = document.getElementById ("menu-btn")
+  menuBoton.addEventListener("click" , ()=> {
+    menuBoton.classList.add("show")
+  })
+
+  const cartBoton = document.getElementById ("cart-btn")
+
+  const cartBotonshow = document.getElementById("cart-mobile-id")
+
+  cartBoton.addEventListener("click" , ()=> {
+    cartBotonshow.classList.add("show-cart")
+    console.log("esta dando click")
+  })
+
+*/
