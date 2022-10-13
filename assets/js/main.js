@@ -65,27 +65,22 @@
     closeCart()  
   })
  
+  const menu = document.getElementById("menu-bar")
+  const openMenu = () => menu.classList.add("show")
 
+  const closeMenu = () => menu.classList.remove("show")
 
+  const menuIcon = document.getElementById("menu-btn")
 
+  const menuCloseIcon = document.getElementById("close-menu")
 
+menuIcon.addEventListener("click", () =>{
+  openMenu()
+  console.log("abrir")
+})
 
+menuCloseIcon.addEventListener ("click",() =>{
+  closeMenu()
+  console.log("cerrar")
+})
 
-
-/*
-
-  const menuBoton = document.getElementById ("menu-btn")
-  menuBoton.addEventListener("click" , ()=> {
-    menuBoton.classList.add("show")
-  })
-
-  const cartBoton = document.getElementById ("cart-btn")
-
-  const cartBotonshow = document.getElementById("cart-mobile-id")
-
-  cartBoton.addEventListener("click" , ()=> {
-    cartBotonshow.classList.add("show-cart")
-    console.log("esta dando click")
-  })
-
-*/
