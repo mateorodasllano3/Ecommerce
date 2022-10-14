@@ -27,9 +27,11 @@
   */
  
 
-  document.addEventListener("DOMContentLoaded", () =>{
-    console.log("DOM CARGADO")
-  })
+document.addEventListener("DOMContentLoaded", () =>{
+  console.log("DOM CARGADO")
+})
+
+
   const themeIcon = document.getElementById("theme-btn")
   themeIcon.addEventListener( "click" , ()=> {
     document.body.classList.toggle("dark")
@@ -44,10 +46,26 @@
   const loadComponent = () => {
     const loader = document.getElementById( "loader" )}
 
-  const cart = document.getElementById("cart-container")
-  const openCart = () => cart.classList.remove("hide")
+
+
+    const cart = document.getElementById("cart-container")
+
+    cart.addEventListener('click' , () =>{
+    
+        if(cart.classList.contains("hide-cart")){
+          cart.classList.remove("hide-cart")
+        }else{
+          cart.classList.add( "hide-cart" )
+        }
+      })
+
+
+  const openCart = () => cart.classList.remove("hide-cart")
 
   const closeCart =() => cart.classList.add ("hide")
+
+
+
 
   const shopIcon = document.getElementById("cart-shop")
 
@@ -83,4 +101,25 @@ menuCloseIcon.addEventListener ("click",() =>{
   closeMenu()
   console.log("cerrar")
 })
+
+
+const contenedorCheckout = document.getElementById('contenedor-hidden')
+const emptyCheckout = document.getElementById('section-empty')
+const addBlack = document.getElementById('add-black-s')
+const itemTwo = document.getElementsByClassName('item-number-2')
+const plusButtons = document.getElementsByClassName('product-added')
+
+
+
+plusButtons.addEventListener("click",()=>{
+  clickExisting()
+})
+
+const clickExisting = () =>{
+  emptyCheckout.classList.add('empty-checkout')
+  if(contenedorCheckout.id='contenedor-hidden'){
+    contenedorCheckout.id='contenedor-visible'
+  }else{
+    contenedorCheckout.id='contenedor-hidden' 
+}}
 
