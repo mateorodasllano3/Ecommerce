@@ -335,7 +335,6 @@ a{
   position: absolute;
   top:-5px;
   right: -5px;
-  
 }
 
 
@@ -378,8 +377,9 @@ a{
   position: absolute;
   top:1rem;
   right: 1.5rem;
-  
 }
+
+
 
 .close--menu{
   font-size: 2rem;
@@ -445,12 +445,7 @@ right: 1.5rem;
   text-align: center;
 }
 
-.producto-contenedor{
-  display: grid;
-  grid-template-columns: 30% 70%;
-  align-items: center;
-  gap:1rem;
-}
+
 
 .texto{
   display: grid;
@@ -465,7 +460,7 @@ right: 1.5rem;
   gap: 2rem;
 }
 
-#contador{
+.contador{
   width: 2.4rem;
 }
 
@@ -507,9 +502,24 @@ right: 1.5rem;
   text-align: end;
 }
 
+#red-section-hidden{
+  display: none;
+}
 
+#black-section-hidden{
+  display: none;
+}
 
+#white-section-hidden{
+  display: none;
+}
 
+.producto-contenedor{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  gap:1rem;
+}
 
 
 

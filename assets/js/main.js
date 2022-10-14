@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 
     const cart = document.getElementById("cart-container")
-
-    cart.addEventListener('click' , () =>{
+    const cartXCloser = document.getElementById('close-cart')
+    cartXCloser.addEventListener('click' , () =>{
     
         if(cart.classList.contains("hide-cart")){
           cart.classList.remove("hide-cart")
@@ -107,19 +107,68 @@ const contenedorCheckout = document.getElementById('contenedor-hidden')
 const emptyCheckout = document.getElementById('section-empty')
 const addBlack = document.getElementById('add-black-s')
 const itemTwo = document.getElementsByClassName('item-number-2')
-const plusButtons = document.getElementsByClassName('product-added')
+const plusRedButton = document.getElementById('add-red-s')
+const plusBlackButton = document.getElementById('add-black-s')
+const plusWhiteButton = document.getElementById('add-white-s')
+const redCheckoutSection = document.getElementById('red-section-hidden')
+const blackCheckoutSection = document.getElementById('black-section-hidden')
+const whiteCheckoutSection = document.getElementById('white-section-hidden')
+const cartNumber = document.getElementById('cart-counter')
 
 
 
-plusButtons.addEventListener("click",()=>{
-  clickExisting()
-})
 
 const clickExisting = () =>{
   emptyCheckout.classList.add('empty-checkout')
   if(contenedorCheckout.id='contenedor-hidden'){
     contenedorCheckout.id='contenedor-visible'
-  }else{
-    contenedorCheckout.id='contenedor-hidden' 
-}}
+  }
+}
 
+contadorCart = 0
+const addCounter = ()=>{
+  contadorCart ++
+  cartNumber.innerText = `${contadorCart}`
+}
+
+
+plusRedButton.addEventListener("click",()=>{
+  console.log('occurre un click red')
+  clickExisting()
+  addRedSection()
+  addCounter()
+  
+})
+const addRedSection = () =>{
+  if(redCheckoutSection.id='red-section-hidden'){
+    redCheckoutSection.id=''
+  }
+
+}
+
+
+plusBlackButton.addEventListener("click",()=>{
+  console.log('occurre un click black')
+  clickExisting()
+  addBlackSection()
+  addCounter()
+})
+const addBlackSection = () =>{
+  if(blackCheckoutSection.id='black-section-hidden'){
+    blackCheckoutSection.id=''
+  }
+
+}
+
+
+plusWhiteButton.addEventListener("click",()=>{
+  console.log('occurre un click white')
+  clickExisting()
+  addWhiteSection()
+  addCounter()
+})
+const addWhiteSection = () =>{
+  if(whiteCheckoutSection.id='white-section-hidden'){
+    whiteCheckoutSection.id=''
+  }
+}
