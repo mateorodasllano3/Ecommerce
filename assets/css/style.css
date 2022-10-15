@@ -58,6 +58,42 @@ body.dark{
   --border-color: hsl(0, 0%, 20%);
 }
 
+.loader{
+  background-color: var(--body-color);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loader.hide-loader{
+  display: none;
+}
+
+.loader--img{
+  width: 100px;
+  fill: var(--first-color);
+  position: relative;
+  animation: load 1.5s infinite;
+}
+
+@keyframes load{
+  0%{
+    top: 0;
+  }
+  50%{
+    top: 30px;
+  }
+  100%{
+    top: 0;
+  }
+}
+
 .logo-academlo{
   width: 40px;
   fill: var(--title-color);

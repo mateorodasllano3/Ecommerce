@@ -32,6 +32,21 @@ document.addEventListener("DOMContentLoaded", () =>{
 })
 
 
+
+const loadComponent = () =>{
+  const loader = document.getElementById ('loader')
+  setTimeout(() =>{
+    loader.classList.add('hide-loader')
+  },2500);
+}
+
+document.addEventListener("DOMContentLoaded", loadComponent())
+
+
+
+
+
+
   const themeIcon = document.getElementById("theme-btn")
   themeIcon.addEventListener( "click" , ()=> {
     document.body.classList.toggle("dark")
@@ -42,10 +57,6 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     }
   })
-
-  const loadComponent = () => {
-    const loader = document.getElementById( "loader" )}
-
 
 
     const cart = document.getElementById("cart-container")
@@ -109,11 +120,15 @@ const addBlack = document.getElementById('add-black-s')
 const itemTwo = document.getElementsByClassName('item-number-2')
 const plusRedButton = document.getElementById('add-red-s')
 const plusBlackButton = document.getElementById('add-black-s')
+const plusAddButton = document.getElementById('add-black-s-btn')
 const plusWhiteButton = document.getElementById('add-white-s')
 const redCheckoutSection = document.getElementById('red-section-hidden')
 const blackCheckoutSection = document.getElementById('black-section-hidden')
 const whiteCheckoutSection = document.getElementById('white-section-hidden')
 const cartNumber = document.getElementById('cart-counter')
+
+/* prices */
+
 
 
 
@@ -123,11 +138,13 @@ const clickExisting = () =>{
   if(contenedorCheckout.id='contenedor-hidden'){
     contenedorCheckout.id='contenedor-visible'
   }
+
 }
 
 contadorCart = 0
 const addCounter = ()=>{
-  contadorCart ++
+
+  contadorCart += 1
   cartNumber.innerText = `${contadorCart}`
 }
 
@@ -137,15 +154,15 @@ plusRedButton.addEventListener("click",()=>{
   clickExisting()
   addRedSection()
   addCounter()
-  
+
 })
+
 const addRedSection = () =>{
   if(redCheckoutSection.id='red-section-hidden'){
     redCheckoutSection.id=''
   }
 
 }
-
 
 plusBlackButton.addEventListener("click",()=>{
   console.log('occurre un click black')
@@ -160,6 +177,15 @@ const addBlackSection = () =>{
 
 }
 
+
+
+// que el add to cart funcione
+plusAddButton.addEventListener("click",()=>{
+  console.log('occurre un click black en addcart')
+  clickExisting()
+  addBlackSection()
+  addCounter()
+})
 
 plusWhiteButton.addEventListener("click",()=>{
   console.log('occurre un click white')
